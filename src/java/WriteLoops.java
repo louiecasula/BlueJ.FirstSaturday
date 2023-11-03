@@ -81,9 +81,11 @@ public class WriteLoops {
         int w = 0;
 
         // Write a FOR loop from 1 to less than 5001 by 11s.
-        // calling
-        w = w + 1;
-        // each time through the loop
+        for (int i = 1; i < 5001; i = i + 11) {
+            // calling
+            w = w + 1;
+            // each time through the loop
+        }
         
         return w;
     }
