@@ -172,19 +172,24 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
 
         // do your while loop here
- 
+        while (runningScore < highestScore) {
+            runningScore += currentScore;
+            currentScore = gameNextScore();
             // calling
             w = w + 1;
             // each time through the inner loop
+        }
+ 
+
         
-        return w; // >= 3;
+        return w >= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -196,10 +201,15 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-
+        do {
+            runningScore += currentScore;
+            currentScore = gameNextScore();
             // calling
             w = w + 1;
             // each time through the inner loop
+        } while (runningScore < highestScore);
+
+
 
         return w >= 3;
     }
@@ -212,10 +222,17 @@ public class WriteLoops {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
         
+        while (serverIsRunning() == true) {
+            waitFor(5);
+            // calling
+            w = w + 1;
+            // each time through the inner loop
+        }
+        if (serverIsRunning() == false) {
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("Help!", adminPhoneNumber);
+        }
 
-        // calling
-        w = w + 1;
-        // each time through the inner loop
         
         return w;
     }
