@@ -16,9 +16,11 @@ public class WriteLoops {
         int w = 0;
 
         // Write a FOR loop that counts from 1 to 10.
+        for (int i = 0; i < 5; i++) {
             // calling
             w = w + 1;
             // each time through the loop
+        }
 
         // this will tell the test how many times the loop executed.
         return w;
@@ -28,9 +30,11 @@ public class WriteLoops {
         int w = 0;
 
         // Write a FOR loop that counts from 1 to 10.
-        // calling
-        w = w + 1;
-        // each time through the loop
+        for (int i = 0; i < 10; i++) {
+            // calling
+            w = w + 1;
+            // each time through the loop
+        }
         
         return w;
     }
