@@ -110,14 +110,22 @@ public class WriteLoops {
     public int helloZipCode() {
         int w = 0;
 
-        // Write a FOR loop that counts from 5 to 105. Put an IF
-        // statement inside the loop that checks the
-        // loop index counter and if it’s greater than 51,
-        // prints “Hello Zipcode” instead of the statement w = w + 1;
-
+        // Write a FOR loop that counts from 5 to 105.
+        for (int i = 5; i <= 105; i++) {
+            // Put an IF statement inside the loop that checks the
+            // loop index counter and if it’s greater than 51,
+            // prints “Hello Zipcode” instead of the statement w = w + 1;
+            if (i > 51){
+                System.out.println("Hello Zipcode");
+            } else {
                 // calling
                 w = w + 1;
-            // each time through the inner loop
+                // each time through the inner loop
+            }
+        }
+
+
+
         
         return w;
     }
