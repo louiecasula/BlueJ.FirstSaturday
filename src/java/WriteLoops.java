@@ -323,7 +323,7 @@ public class WriteLoops {
  
             // be sure to call
             w = w + 1;
-            // each time inside the loop
+            // each time inside the loops
         
         return w;
     }
